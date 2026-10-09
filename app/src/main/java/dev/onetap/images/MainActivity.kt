@@ -65,7 +65,7 @@ class MainActivity : ComponentActivity() {
                                 minLines = 2, maxLines = 5, modifier = Modifier.fillMaxWidth()
                             )
                             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                                Button(onClick = vm::parse, enabled = !state.busy && !state.downloading) {
+                                Button(onClick = { vm.parse() }, enabled = !state.busy && !state.downloading) {
                                     Text("识别链接")
                                 }
                                 OutlinedButton(onClick = {
